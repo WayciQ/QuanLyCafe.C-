@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{469F1B39-AAAB-4CC1-A9A9-E3C79C554772}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyCafe</RootNamespace>
+    <AssemblyName>QuanLyCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cafe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\baocaoDAO.cs" />
+    <Compile Include="DAO\billDAO.cs" />
+    <Compile Include="DAO\BillInforDAO.cs" />
+    <Compile Include="DAO\categoryDAO.cs" />
+    <Compile Include="DAO\dataProvider.cs" />
+    <Compile Include="DAO\foodDAO.cs" />
+    <Compile Include="DAO\khachDAO.cs" />
+    <Compile Include="DAO\userDAO.cs" />
+    <Compile Include="DTO\bill.cs" />
+    <Compile Include="DTO\billInfo.cs" />
+    <Compile Include="DTO\Cart.cs" />
+    <Compile Include="DTO\category.cs" />
+    <Compile Include="DTO\customer.cs" />
+    <Compile Include="DTO\food.cs" />
+    <Compile Include="DTO\user.cs" />
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTableManager.Designer.cs">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCafeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyCafeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\baocao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\baocao.Designer.cs">
+      <DependentUpon>baocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\hoadon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\hoadon.Designer.cs">
+      <DependentUpon>hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\khachhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\khachhang.Designer.cs">
+      <DependentUpon>khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\banhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\banhang.Designer.cs">
+      <DependentUpon>banhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\hanghoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\hanghoa.Designer.cs">
+      <DependentUpon>hanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\nhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\nhanvien.Designer.cs">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\suaThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\suaThongTin.Designer.cs">
+      <DependentUpon>suaThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\themKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uc\themKhach.Designer.cs">
+      <DependentUpon>themKhach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTableManager.resx">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\baocao.resx">
+      <DependentUpon>baocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\hoadon.resx">
+      <DependentUpon>hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\khachhang.resx">
+      <DependentUpon>khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\banhang.resx">
+      <DependentUpon>banhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\hanghoa.resx">
+      <DependentUpon>hanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\nhanvien.resx">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\suaThongTin.resx">
+      <DependentUpon>suaThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\themKhach.resx">
+      <DependentUpon>themKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyCafeDataSet.xsc">
+      <DependentUpon>QuanLyCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyCafeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyCafeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyCafeDataSet.xss">
+      <DependentUpon>QuanLyCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\add_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cafe.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
